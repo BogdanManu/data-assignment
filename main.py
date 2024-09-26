@@ -17,10 +17,10 @@ spark = SparkSession.builder.appName('Datasets Merge') \
 spark   # Testing the app and it's working
 
 # Loading the datasets as Spark dataframes
-facebook_df = spark.read.csv('datasets/facebook_dataset.csv', header=True, inferSchema=True)
-google_df = spark.read.csv('datasets/google_dataset.csv', header=True, inferSchema=True)
+facebook_df = spark.read.csv('D:\Datasets/facebook_dataset.csv', header=True, inferSchema=True)
+google_df = spark.read.csv('D:\Datasets/google_dataset.csv', header=True, inferSchema=True)
 # We can read the website dataset using the delimiter ';' and should have 11 categories/columns
-website_df = spark.read.option("delimiter", ";").csv('datasets/website_dataset.csv', header=True)
+website_df = spark.read.option("delimiter", ";").csv('D:\Datasets/website_dataset.csv', header=True)
 
 # We need to understand the structure - checking schema for each dataset
 facebook_df.printSchema()
